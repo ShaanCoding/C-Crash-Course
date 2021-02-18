@@ -133,4 +133,91 @@ int main() {
 - Comparison == != < > <= >=
 - Logical Operators && || !
 - Conditional Operators ? :
-- 
+
+## Conditional Operator
+
+- An if statement evaluates to a true or a false statement
+- If it is true it is executed, if it isn't it isn't evaluated
+- We can also have an else statement
+
+### Logical Operators
+
+- ! (not)
+- && and
+- || or
+
+#### Case Statements
+
+```c
+    switch (menuChoice)
+    {
+    case 0:
+        printf("Case 0\n");
+        break;
+    case 1:
+        printf("Case 1\n");
+        break;
+    case 2:
+        printf("Case 2\n");
+        break;
+    case 3:
+        printf("Case 3\n");
+        break;
+    default:
+        printf("Case Default\n");
+        break;
+    }
+  ```
+
+  - Alternatively you can do multiple cases with just stacking lines
+
+```c
+    switch (menuChoice)
+    {
+    case 0:
+    case 1:
+    case 2:
+        printf("Case 0\n");
+    break;
+    case 3:
+        printf("Case 3\n");
+        break;
+    default:
+        printf("Case Default\n");
+        break;
+    }
+  ```
+
+## Loops
+
+- A for loop needs three things to stay functional
+  - Initalization
+  - Comparison
+  - Update of function
+
+```c
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d", i);
+    }
+```
+
+- Unfortunately .size or .length doesn't exist for arrays in C
+- To calculate the size of an array we use the sizeOf function
+- sizeOf(array) / sizeof(ages[0])
+
+## While-Loops
+
+```c
+while(condition)
+{
+
+}
+```
+
+```c
+do 
+{
+
+} while(condition)
+```
