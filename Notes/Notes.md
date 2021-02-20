@@ -205,6 +205,7 @@ int main() {
 - Unfortunately .size or .length doesn't exist for arrays in C
 - To calculate the size of an array we use the sizeOf function
 - sizeOf(array) / sizeof(ages[0])
+  - Note: if this is dona inside of a function where an array is passed in like ages, this won't work. This is because an array decays into a pointer it's not passed via literals. It'll give the size of a pointer and not the size of the array.
 
 ## While-Loops
 
@@ -220,4 +221,51 @@ do
 {
 
 } while(condition)
+```
+
+## Arrays
+
+- We've lightly covered arrays but we haven't gone through them deeply
+- An array is an range of data which it is in the same type
+
+```c
+int age[];
+```
+- With C you can't do it with the data type, you have to do it after the array.
+
+- To declare an array we need to specify the size it's got to be.
+
+```c
+int ages[10];
+```
+
+- Arrays are 0 based indexes
+- Arrays are statically sized array, which means the size is determined on compile time and it cannot become bigger.
+- It's not very simple to make an array which is dynamic without malloc.
+
+- We can assign elements directly like ages[4] = 65.
+
+Or we can do the shorthand method
+
+int ages[] = {5, 3, 2, 11, 8};
+
+- As C doesn't measure the size of the function, it is good to measure it, especially when passing via functions so we should have another integer measuring size
+
+```c
+int size = 8;
+int ages[] = {1,2,3,4,5,6,7,8};
+```
+
+- Multidimensional arrays
+- Array lengths must be constant
+
+```c
+int rows = 3;
+int const colums = 4;
+
+int studentGrades[][columns] = {
+  {1,2,4,6},
+  {3,2,4,5},
+  {32,2,4,9}
+};
 ```
