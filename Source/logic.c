@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdbool.h>
+// #include <stdbool.h>     // bloat
 
 int main()
 {
 
-    if (true)
+    if (1)
     {
         printf("This is true\n");
     }
