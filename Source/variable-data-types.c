@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include <stdbool.h>
+// #include <stdbool.h> // unused variable
 
 int main()
 {
@@ -15,7 +15,7 @@ int main()
 
     char characterArray[] = "Character Array"; // Aka a STRING
 
-    bool f = false;
+//     bool f = false;  // unused variable
 
     // int zero = 0.999999999;
     // printf("zero is %d\n", zero);
